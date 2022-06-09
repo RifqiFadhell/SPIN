@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "613501311980",
+    "firebase_url": "https://spin-esports-default-rtdb.firebaseio.com",
+    "project_id": "spin-esports",
+    "storage_bucket": "spin-esports.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613501311980:android:cd01acebc155c9c36a3ec9",
+        "android_client_info": {
+          "package_name": "com.spin.id"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613501311980-l07e2s1vaepm0lpeg0bnj7i16gudqdos.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.spin.id",
+            "certificate_hash": "cbf26c20f25cd19f19e6ddb1a1d493c4e31a3d53"
+          }
+        },
+        {
+          "client_id": "613501311980-o6u5bus3pe2f944oi4b4ed4roq4lp9nt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyqQHgHtYNf0F9ocs6gnbceCyb2izMBuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613501311980-o6u5bus3pe2f944oi4b4ed4roq4lp9nt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613501311980:android:5e1d16a09503548b6a3ec9",
+        "android_client_info": {
+          "package_name": "com.spin.id.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613501311980-q26flencabappvcancjn5ilo0bgsn8r9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.spin.id.staging",
+            "certificate_hash": "2759a580b06f2af18ed930c26e1248bc6f73549d"
+          }
+        },
+        {
+          "client_id": "613501311980-o6u5bus3pe2f944oi4b4ed4roq4lp9nt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyqQHgHtYNf0F9ocs6gnbceCyb2izMBuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613501311980-o6u5bus3pe2f944oi4b4ed4roq4lp9nt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

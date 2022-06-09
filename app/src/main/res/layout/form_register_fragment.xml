@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <ScrollView
+    android:id="@+id/layoutRegisterForm"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@id/layoutNavigation"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/layoutTouchOutside"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_xxx"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:padding="@dimen/default_padding_margin"
+        android:text="@string/register_form_title"
+        android:textAlignment="center"
+        android:textColor="@color/cinder"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/buttonGoogle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin"
+        android:background="@drawable/google_button_background"
+        android:drawableStart="@drawable/ic_google"
+        android:gravity="center"
+        android:paddingStart="@dimen/default_padding_margin_xxxx"
+        android:paddingTop="@dimen/default_padding_margin_h"
+        android:paddingEnd="@dimen/default_padding_margin_xxxx"
+        android:paddingBottom="@dimen/default_padding_margin_h"
+        android:text="@string/google_label"
+        android:textColor="#4285F4"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/buttonFacebook"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/buttonFacebook"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:background="@drawable/facebook_button_background"
+        android:drawableStart="@drawable/ic_facebook"
+        android:gravity="center"
+        android:paddingStart="@dimen/default_padding_margin_xxx"
+        android:paddingTop="@dimen/default_padding_margin_h"
+        android:paddingEnd="@dimen/default_padding_margin_xxx"
+        android:paddingBottom="@dimen/default_padding_margin_h"
+        android:text="@string/facebook_label"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonGoogle"
+        app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+      <View
+        android:id="@+id/lineCenter"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_xxx"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:background="@color/gray10"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonGoogle" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/default_padding_margin"
+        android:text="@string/register_diversion_label"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/lineCenter"
+        app:layout_constraintEnd_toEndOf="@id/lineCenter"
+        app:layout_constraintStart_toStartOf="@id/lineCenter"
+        app:layout_constraintTop_toTopOf="@id/lineCenter" />
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputFirstName"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_xxx"
+        android:layout_marginEnd="@dimen/default_padding_margin_small"
+        android:hint="@string/register_first_name_hint"
+        android:paddingStart="@dimen/default_padding_margin_small_x"
+        android:paddingEnd="@dimen/default_padding_margin_small_x"
+        app:errorIconDrawable="@null"
+        app:layout_constraintEnd_toStartOf="@id/textInputLastName"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lineCenter"
+        app:startIconDrawable="@drawable/ic_id_card">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editFirstName"
+          style="@style/EditText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:imeOptions="actionNext"
+          android:inputType="text"
+          android:maxLines="1"
+          android:textSize="14sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLastName"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_small"
+        android:layout_marginTop="@dimen/default_padding_margin_xxx"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:hint="@string/register_last_name_hint"
+        app:errorIconDrawable="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textInputFirstName"
+        app:layout_constraintTop_toBottomOf="@id/lineCenter"
+        app:startIconDrawable="@drawable/ic_id_card">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editLastName"
+          style="@style/EditText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:imeOptions="actionNext"
+          android:inputType="text"
+          android:maxLines="1"
+          android:textSize="14sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputUserName"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:hint="@string/username_label"
+        android:paddingStart="@dimen/default_padding_margin_small_x"
+        android:paddingEnd="@dimen/default_padding_margin_small_x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputFirstName"
+        app:startIconDrawable="@drawable/ic_user">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editUserName"
+          style="@style/EditText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:imeOptions="actionNext"
+          android:inputType="text"
+          android:maxLines="1"
+          android:textSize="14sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginBottom="@dimen/default_padding_margin_h"
+        android:background="@drawable/password_dialog_background"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/textInputPassword"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/textTitlePassword"
+          android:layout_width="250dp"
+          android:layout_height="0dp"
+          android:layout_marginStart="@dimen/default_padding_margin_x"
+          android:layout_marginTop="@dimen/default_padding_margin_x"
+          android:layout_marginEnd="@dimen/default_padding_margin_x"
+          android:text="@string/register_password_dialog_title"
+          android:textColor="@color/cinder"
+          android:textSize="14sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/textUppercase"
+          android:layout_width="wrap_content"
+          android:layout_height="0dp"
+          android:layout_marginStart="@dimen/default_padding_margin_x"
+          android:layout_marginTop="@dimen/default_padding_margin_x"
+          android:layout_marginEnd="@dimen/default_padding_margin_x"
+          android:drawableStart="@drawable/ic_uncheck"
+          android:drawablePadding="@dimen/default_padding_margin"
+          android:text="@string/register_password_uppercase_dialog_title"
+          android:textColor="@color/dustyGray"
+          android:textSize="14sp"
+          android:visibility="gone"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textTitlePassword" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/textSpecialChar"
+          android:layout_width="wrap_content"
+          android:layout_height="0dp"
+          android:layout_marginStart="@dimen/default_padding_margin_x"
+          android:layout_marginTop="@dimen/default_padding_margin"
+          android:layout_marginEnd="@dimen/default_padding_margin_x"
+          android:drawableStart="@drawable/ic_uncheck"
+          android:drawablePadding="@dimen/default_padding_margin"
+          android:text="@string/register_password_special_case_dialog_title"
+          android:textColor="@color/dustyGray"
+          android:textSize="14sp"
+          android:visibility="gone"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/textUppercase" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/textMinPassword"
+          android:layout_width="wrap_content"
+          android:layout_height="0dp"
+          android:layout_marginStart="@dimen/default_padding_margin_x"
+          android:layout_marginTop="@dimen/default_padding_margin"
+          android:layout_marginEnd="@dimen/default_padding_margin_x"
+          android:layout_marginBottom="@dimen/default_padding_margin_x"
+          android:drawableStart="@drawable/ic_uncheck"
+          android:drawablePadding="@dimen/default_padding_margin"
+          android:paddingBottom="@dimen/default_padding_margin_x"
+          android:text="@string/register_password_min_dialog_title"
+          android:textColor="@color/dustyGray"
+          android:textSize="14sp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/textSpecialChar" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageGatePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_xx"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/layoutPassword"
+        app:layout_constraintTop_toBottomOf="@id/layoutPassword"
+        app:srcCompat="@drawable/ic_triangle_down" />
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputPassword"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:hint="@string/password_label"
+        android:paddingStart="@dimen/default_padding_margin_small_x"
+        android:paddingEnd="@dimen/default_padding_margin_small_x"
+        app:errorIconDrawable="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputUserName"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/ic_key">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editPassword"
+          style="@style/EditText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:imeOptions="actionNext"
+          android:inputType="textPassword"
+          android:maxLines="1"
+          android:textSize="14sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputNumber"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:hint="@string/register_number_hint"
+        android:paddingStart="@dimen/default_padding_margin_small_x"
+        android:paddingEnd="@dimen/default_padding_margin_small_x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputPassword"
+        app:startIconDrawable="@drawable/ic_mobile_phone">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editNumber"
+          style="@style/EditText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:imeOptions="actionNext"
+          android:inputType="number"
+          android:maxLength="14"
+          android:maxLines="1"
+          android:textSize="14sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputEmail"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:hint="@string/register_email_hint"
+        android:paddingStart="@dimen/default_padding_margin_small_x"
+        android:paddingEnd="@dimen/default_padding_margin_small_x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputNumber"
+        app:startIconDrawable="@drawable/ic_message">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editEmail"
+          style="@style/EditText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:imeOptions="actionDone"
+          android:inputType="textEmailAddress"
+          android:maxLines="1"
+          android:textSize="14sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkReferral"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:text="@string/referral_check_title"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputEmail" />
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputReferral"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:hint="@string/referral_title"
+        android:paddingStart="@dimen/default_padding_margin_small_x"
+        android:paddingEnd="@dimen/default_padding_margin_small_x"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkReferral">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editReferral"
+          style="@style/EditText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:imeOptions="actionDone"
+          android:inputType="textEmailAddress"
+          android:maxLines="1"
+          android:textSize="14sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textAgreement"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:layout_marginBottom="@dimen/default_padding_margin_huge"
+        android:text="@string/register_agreement_title"
+        android:textAlignment="center"
+        android:textColor="@color/cinder"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputReferral" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </ScrollView>
+
+  <include
+    android:id="@+id/layoutSimpleForm"
+    layout="@layout/simple_form_fragment"
+    android:visibility="gone"
+    app:layout_constraintBottom_toTopOf="@id/layoutNavigation"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <RelativeLayout
+    android:id="@+id/layoutNavigation"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <include
+      android:id="@+id/layoutBottom"
+      layout="@layout/navigation_layout" />
+  </RelativeLayout>
+
+  <include
+    android:id="@+id/layoutSuccessRegister"
+    layout="@layout/new_success_registered_layout"
+    android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

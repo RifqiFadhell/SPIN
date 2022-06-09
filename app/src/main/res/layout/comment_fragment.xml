@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:fitsSystemWindows="true">
+
+  <include
+    android:id="@+id/toolbar"
+    layout="@layout/bottom_sheet_toolbar"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.core.widget.NestedScrollView
+    android:id="@+id/scrollComment"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@id/card"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listComment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        tools:listitem="@layout/comment_item" />
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+  <androidx.cardview.widget.CardView
+    android:id="@+id/card"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:cardElevation="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/layoutBottom"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputComment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:layout_marginBottom="@dimen/default_padding_margin_x"
+        android:background="@drawable/comment_background"
+        android:paddingTop="@dimen/default_padding_margin_small"
+        android:paddingBottom="@dimen/default_padding_margin_small"
+        app:boxBackgroundMode="none"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editComment"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginStart="@dimen/default_padding_margin_xxh"
+          android:layout_marginEnd="@dimen/default_padding_margin_xxh"
+          android:background="@android:color/transparent"
+          android:hint="@string/comment_label"
+          android:maxLines="5"
+          android:padding="@dimen/default_padding_margin"
+          android:scrollbars="vertical"
+          android:textSize="14sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/default_padding_margin_xx"
+        android:textSize="10sp"
+        android:padding="@dimen/default_padding_margin_small"
+        app:layout_constraintBottom_toBottomOf="@id/textInputComment"
+        app:layout_constraintEnd_toEndOf="@id/textInputComment"
+        tools:ignore="SmallSp"
+        tools:text="100/500" />
+
+      <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="@dimen/default_padding_margin"
+        android:src="@drawable/ic_place_holder"
+        app:layout_constraintBottom_toBottomOf="@id/textInputComment"
+        app:layout_constraintStart_toStartOf="@id/textInputComment"
+        app:layout_constraintTop_toTopOf="@id/textInputComment"
+        tools:ignore="VectorDrawableCompat" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin"
+        android:layout_marginEnd="@dimen/default_padding_margin_small"
+        android:padding="@dimen/default_padding_margin"
+        app:layout_constraintBottom_toBottomOf="@id/textInputComment"
+        app:layout_constraintEnd_toEndOf="@id/textInputComment"
+        app:layout_constraintTop_toTopOf="@id/textInputComment"
+        app:srcCompat="@drawable/ic_send" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.cardview.widget.CardView>
+
+  <include
+    android:id="@+id/emptyComment"
+    layout="@layout/empty_comment_layout"
+    tools:visibility="gone" />
+
+  <ProgressBar
+    android:id="@+id/progressBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,1 +1,1 @@
-# SPIN
+Spin Daily Mobile Application

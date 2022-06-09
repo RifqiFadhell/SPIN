@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+    android:id="@+id/actionRefresh"
+    android:title="@string/action_refresh" />
+  <item
+    android:id="@+id/actionOpenChrome"
+    android:title="@string/action_open_chrome" />
+  <item
+    android:id="@+id/actionCopyLink"
+    android:title="@string/action_copy" />
+  <item
+    android:id="@+id/actionClose"
+    android:title="@string/action_close" />
+
+</menu>

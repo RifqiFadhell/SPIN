@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  tools:context=".ui.home.games.GamesFragment">
+
+  <include
+    android:id="@+id/toolbar"
+    layout="@layout/toolbar"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/listSort"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/listItemDetail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:listitem="@layout/item_list_detail_commerce" />
+</LinearLayout>

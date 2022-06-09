@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/layoutParent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <include
+    android:id="@+id/toolbar"
+    layout="@layout/shop_toolbar" />
+
+  <ScrollView
+    android:id="@+id/scroll"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@id/layoutNavigation"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/layoutSecondParent"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingBottom="@dimen/default_padding_margin_xx">
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_place_holder" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitleValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_h"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="@id/image"
+        tools:text="325 Diamonds" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textSubValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_h"
+        android:textColor="@color/silverChalice"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        tools:text="325 Diamonds" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textPackage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:text="@string/package_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listPackage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textPackage"
+        tools:itemCount="3"
+        tools:layoutManager="GridLayoutManager"
+        tools:listitem="@layout/package_item"
+        tools:spanCount="3" />
+
+      <View
+        android:id="@+id/background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_xh"
+        android:background="@drawable/background_stroke"
+        app:layout_constraintBottom_toBottomOf="@id/textCaptionTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listPackage" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_xxxh"
+        android:layout_marginTop="@dimen/default_padding_margin_xxx"
+        android:layout_marginEnd="@dimen/default_padding_margin"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listPackage"
+        tools:text="5 - 10 Menit" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textCaptionTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_xxxh"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_xxxh"
+        android:paddingBottom="@dimen/default_padding_margin_x"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTime"
+        tools:text="Produk akan dikirim penjual dalam 5-10 menit setelah pembayaran. Toko buka jam 08:00 - 20:00 WIB. Order diluar jam buka paling lambat akan diproses besok." />
+
+      <View
+        android:id="@+id/backgroundRefund"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_xh"
+        android:background="@drawable/background_green_rounded"
+        app:layout_constraintBottom_toBottomOf="@id/textCaptionRefund"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/background" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageVerified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_xxx"
+        android:layout_marginTop="@dimen/default_padding_margin_xxh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/background"
+        tools:src="@drawable/ic_verified_green" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textRefund"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin"
+        android:layout_marginTop="@dimen/default_padding_margin_xxh"
+        android:layout_marginEnd="@dimen/default_padding_margin"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/forestGreen"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imageVerified"
+        app:layout_constraintTop_toBottomOf="@id/background"
+        tools:text="100% Refund" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textCaptionRefund"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin"
+        android:layout_marginTop="@dimen/default_padding_margin_small"
+        android:layout_marginEnd="@dimen/default_padding_margin_xxxh"
+        android:paddingBottom="@dimen/default_padding_margin_x"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/forestGreen"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageVerified"
+        app:layout_constraintTop_toBottomOf="@id/textRefund"
+        app:lineHeight="16sp"
+        tools:text="Apabila order Anda belum juga diproses oleh pihak toko setelah sudah lewat 24 jam setelah konfirmasi pembayaran" />
+
+      <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupInputRefund"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="textCaptionRefund,textRefund,imageVerified,backgroundRefund" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:text="@string/shop_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backgroundRefund" />
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutSpinnerShop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:layout_marginBottom="@dimen/default_padding_margin_x"
+        android:background="@drawable/background_stroke_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textShop">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/textTitleSpinnerShop"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/default_padding_margin_x"
+          android:layout_marginTop="@dimen/default_padding_margin"
+          android:layout_marginEnd="@dimen/default_padding_margin"
+          android:layout_marginBottom="@dimen/default_padding_margin"
+          android:background="@color/white"
+          android:text="@string/shop_merchant_label"
+          android:textSize="12sp"
+          app:layout_constraintEnd_toStartOf="@id/imageDropDown"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+          android:id="@+id/spinnerShop"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/default_padding_margin_h"
+          android:layout_marginTop="@dimen/default_padding_margin"
+          android:layout_marginEnd="@dimen/default_padding_margin"
+          android:layout_marginBottom="@dimen/default_padding_margin"
+          android:background="@android:color/transparent"
+          android:spinnerMode="dropdown"
+          android:textSize="18sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toStartOf="@id/imageDropDown"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/textTitleSpinnerShop" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/imageDropDown"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/default_padding_margin_h"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@drawable/ic_drop_down" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <View
+        android:id="@+id/lineCenter"
+        android:layout_width="0dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="@dimen/default_padding_margin_xh"
+        android:background="@color/alababster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutSpinnerShop" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textInformation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_xh"
+        android:layout_marginEnd="@dimen/default_padding_margin"
+        android:text="@string/shop_information_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lineCenter" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textCaptionInformation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:text="@string/shop_information_caption"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInformation" />
+
+      <LinearLayout
+        android:id="@+id/formContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textCaptionInformation" />
+
+      <View
+        android:id="@+id/lineCenter2"
+        android:layout_width="0dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="@dimen/default_padding_margin_xh"
+        android:background="@color/alababster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/formContainer" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:text="@string/shop_title_contact"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lineCenter2" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textCaptionContact"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:text="@string/shop_information_contact"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textContact" />
+
+      <View
+        android:id="@+id/backgroundLogin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_xh"
+        android:background="@drawable/background_blue_rounded"
+        app:layout_constraintBottom_toBottomOf="@id/textCaptionLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textCaptionContact" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding_margin_xxh"
+        android:maxLines="1"
+        android:text="@string/shop_title_login"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/text_section_active"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textCaptionContact" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textCaptionLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding_margin_small"
+        android:paddingBottom="@dimen/default_padding_margin_x"
+        android:text="@string/shop_information_login"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/text_section_inactive"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textLogin"
+        app:lineHeight="16sp" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:maxLines="1"
+        android:text="@string/shop_title_form"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#3A3A3C"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backgroundLogin" />
+
+      <View
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin"
+        android:background="@color/gray10"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/textForm"
+        app:layout_constraintEnd_toStartOf="@id/textForm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backgroundLogin"
+        app:layout_constraintTop_toTopOf="@id/textForm" />
+
+      <View
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/default_padding_margin"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:background="@color/gray10"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/textForm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textForm"
+        app:layout_constraintTop_toBottomOf="@id/backgroundLogin"
+        app:layout_constraintTop_toTopOf="@id/textForm" />
+
+      <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="backgroundLogin,textLogin,textCaptionLogin,textForm,line1,line2" />
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputFirstName"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_small"
+        android:hint="@string/register_first_name_hint"
+        android:paddingStart="@dimen/default_padding_margin_small_x"
+        android:paddingEnd="@dimen/default_padding_margin_small_x"
+        app:errorIconDrawable="@null"
+        app:layout_constraintEnd_toStartOf="@id/textInputLastName"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textForm"
+        app:startIconDrawable="@drawable/ic_id_card">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editFirstName"
+          style="@style/EditText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:imeOptions="actionNext"
+          android:inputType="text"
+          android:maxLines="1"
+          android:textSize="14sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLastName"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_small"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:hint="@string/register_last_name_hint"
+        app:errorIconDrawable="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textInputFirstName"
+        app:layout_constraintTop_toBottomOf="@id/textForm"
+        app:startIconDrawable="@drawable/ic_id_card">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editLastName"
+          style="@style/EditText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:imeOptions="actionNext"
+          android:inputType="text"
+          android:maxLines="1"
+          android:textSize="14sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputNumber"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:hint="@string/register_number_hint"
+        android:paddingStart="@dimen/default_padding_margin_small_x"
+        android:paddingEnd="@dimen/default_padding_margin_small_x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputFirstName"
+        app:startIconDrawable="@drawable/ic_mobile_phone">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editNumber"
+          style="@style/EditText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:imeOptions="actionNext"
+          android:inputType="number"
+          android:maxLength="14"
+          android:maxLines="1"
+          android:textSize="14sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputEmail"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:hint="@string/register_email_hint"
+        android:paddingStart="@dimen/default_padding_margin_small_x"
+        android:paddingEnd="@dimen/default_padding_margin_small_x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputNumber"
+        app:startIconDrawable="@drawable/ic_message">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editEmail"
+          style="@style/EditText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:imeOptions="actionDone"
+          android:inputType="textEmailAddress"
+          android:maxLines="1"
+          android:textSize="14sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupFormLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="textCaptionContact, textContact, lineCenter2, textInputFirstName,textInputLastName,textInputNumber,textInputEmail" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textCoupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:text="@string/coupon_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputEmail" />
+
+      <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputCoupon"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:hint="@string/shop_coupon_hint"
+        android:paddingStart="@dimen/default_padding_margin_small_x"
+        android:paddingEnd="@dimen/default_padding_margin_small_x"
+        app:errorIconDrawable="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textCoupon">
+
+        <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/editCoupon"
+          style="@style/EditText"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:imeOptions="actionDone"
+          android:inputType="text"
+          android:maxLines="1"
+          android:textSize="14sp" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/buttonApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding_margin_small"
+        android:padding="@dimen/default_padding_margin_x"
+        android:text="@string/shop_button_apply"
+        app:layout_constraintBottom_toBottomOf="@id/textInputCoupon"
+        app:layout_constraintEnd_toEndOf="@id/textInputCoupon"
+        app:layout_constraintTop_toTopOf="@id/textInputCoupon" />
+
+      <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupInputCoupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="textInputCoupon,buttonApply" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageCoupon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textCoupon"
+        app:srcCompat="@drawable/ic_coupon" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitleItemCoupon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_h"
+        android:layout_marginTop="@dimen/default_padding_margin_small"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageCoupon"
+        app:layout_constraintTop_toTopOf="@id/imageCoupon"
+        tools:text="325 Diamonds" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textSubCoupon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_h"
+        android:layout_marginBottom="@dimen/default_padding_margin_small"
+        android:textColor="@color/silverChalice"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/imageCoupon"
+        app:layout_constraintStart_toEndOf="@+id/imageCoupon"
+        tools:text="325 Diamonds" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/buttonCancelCoupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_padding_margin_x"
+        app:layout_constraintBottom_toBottomOf="@id/imageCoupon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageCoupon"
+        app:srcCompat="@drawable/ic_close_white" />
+
+      <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupCoupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="imageCoupon,textTitleItemCoupon,textSubCoupon,buttonCancelCoupon" />
+
+      <View
+        android:id="@+id/backgroundPrice"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_xh"
+        android:background="@drawable/background_alababster"
+        app:layout_constraintBottom_toBottomOf="@id/textTotal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputCoupon" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitlePrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_xxxh"
+        android:layout_marginTop="@dimen/default_padding_margin_xxx"
+        android:layout_marginEnd="@dimen/default_padding_margin"
+        android:maxLines="1"
+        android:text="@string/shop_title_price"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputCoupon" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textDiamond"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_xxxh"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/silverChalice"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitlePrice"
+        tools:text="238 Diamonds" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textPriceDiamond"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_xxxh"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitlePrice" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitleCoupon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_xxxh"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin"
+        android:maxLines="1"
+        android:text="@string/shop_title_coupon"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textDiamond" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textCouponUse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_small"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/forestGreen"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/textTitleCoupon"
+        app:layout_constraintTop_toBottomOf="@id/textDiamond"
+        tools:text="SPINESPORT" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textPriceCoupon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_xxxh"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/forestGreen"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textDiamond" />
+
+      <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupPriceCoupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="textTitleCoupon,textCouponUse,textPriceCoupon" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_xxxh"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/default_padding_margin_x"
+        android:text="@string/shop_total_label"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitleCoupon" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textPriceTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding_margin_h"
+        android:layout_marginEnd="@dimen/default_padding_margin_xxxh"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTitleCoupon" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:text="@string/shop_payment_label"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backgroundPrice" />
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutPayment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:layout_marginBottom="@dimen/default_padding_margin_x"
+        android:background="@drawable/background_stroke_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textPayment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/textTitlePayment"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/default_padding_margin_x"
+          android:layout_marginTop="@dimen/default_padding_margin"
+          android:layout_marginEnd="@dimen/default_padding_margin"
+          android:layout_marginBottom="@dimen/default_padding_margin"
+          android:background="@color/white"
+          android:text="@string/shop_select_payment_label"
+          android:textSize="10sp"
+          app:layout_constraintEnd_toStartOf="@id/imageDropDownPayment"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/textPaymentValue"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/default_padding_margin_x"
+          android:layout_marginTop="@dimen/default_padding_margin"
+          android:layout_marginEnd="@dimen/default_padding_margin"
+          android:layout_marginBottom="@dimen/default_padding_margin"
+          android:text="@string/select_label"
+          android:textColor="@color/black"
+          android:textSize="16sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toStartOf="@id/imageDropDownPayment"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/textTitlePayment" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/imageDropDownPayment"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/default_padding_margin_h"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:srcCompat="@drawable/ic_drop_down" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </ScrollView>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layoutSnack"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/jungleGreen"
+    android:visibility="gone"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/textCaptionSnack"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/default_padding_margin_x"
+      android:layout_marginTop="@dimen/default_padding_margin_h"
+      android:layout_marginEnd="@dimen/default_padding_margin_x"
+      android:textColor="@color/white"
+      android:textSize="14sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Kode Spin dapat digunakan ya saksjaksaksjkasasbasbajsbasabsabsa" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/buttonDismissSnack"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/default_padding_margin"
+      android:layout_marginEnd="@dimen/default_padding_margin_x"
+      android:layout_marginBottom="@dimen/default_padding_margin_h"
+      android:text="@string/dismiss_label"
+      android:textColor="@color/white"
+      android:textSize="12sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/textCaptionSnack" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <RelativeLayout
+    android:id="@+id/layoutNavigation"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <include
+      android:id="@+id/layoutBottom"
+      layout="@layout/shop_navigation_layout" />
+  </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

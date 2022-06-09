@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginStart="10dp"
+  android:layout_marginTop="10dp"
+  android:layout_marginEnd="10dp"
+  android:layout_marginBottom="10dp"
+  android:background="@drawable/background_item_product">
+
+  <LinearLayout
+    android:id="@+id/imageLayout"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/category_active_background"
+    android:gravity="center"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+      android:id="@+id/imageItemOrder"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_diamond" />
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/textItemOrder"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:fontFamily="@font/inter_semibold"
+    android:gravity="center_vertical"
+    android:textColor="#12121B"
+    android:textSize="15sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toEndOf="@id/imageLayout"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="296 Diamonds" />
+
+  <TextView
+    android:id="@+id/textIdOrder"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:fontFamily="@font/inter_semibold"
+    android:gravity="center_vertical"
+    android:textColor="#9E9E9E"
+    android:textSize="15sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="Order XA123B70" />
+
+  <TextView
+    android:id="@+id/textNameProductOrder"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:fontFamily="@font/inter_semibold"
+    android:gravity="center_vertical"
+    android:textColor="#9E9E9E"
+    android:textSize="15sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toEndOf="@id/imageLayout"
+    app:layout_constraintTop_toBottomOf="@+id/textItemOrder"
+    tools:text="Mobile Legend" />
+
+  <TextView
+    android:id="@+id/textTimeOrder"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="10dp"
+    android:fontFamily="@font/inter_semibold"
+    android:gravity="center_vertical"
+    android:textColor="#9E9E9E"
+    android:textSize="15sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textNameProductOrder"
+    tools:text="16 Oktober 2020 - 20:25" />
+
+  <TextView
+    android:id="@+id/textPriceOrder"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="10dp"
+    android:fontFamily="@font/inter_semibold"
+    android:gravity="center_vertical"
+    android:textColor="#283360"
+    android:textSize="15sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textNameProductOrder"
+    tools:text="Rp 20.000" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#169DEA</color>
+  <color name="colorPrimaryDark">#169DEA</color>
+  <color name="colorAccent">#169DEA</color>
+
+  <color name="white">#FFFFFFFF</color>
+  <color name="color_button_inactive">#DBDBDB</color>
+
+  <color name="color_button">#169DEA</color>
+  <color name="catalinaBlue">#033A7C</color>
+  <color name="curiousBlue">#169DEA</color>
+  <color name="zumthor">#ECF5FF</color>
+
+  <color name="black">#FF000000</color>
+  <color name="cinder">#12121B</color>
+  <color name="vulcan">#151821</color>
+  <color name="deepCove">#07173C</color>
+
+  <color name="limeAde">#3EC100</color>
+  <color name="hintGreen">#ECFFF1</color>
+  <color name="forestGreen">#20B026</color>
+  <color name="jungleGreen">#27AE60</color>
+
+  <color name="redOrange">#FF3B30</color>
+  <color name="coralRed">#FF453A</color>
+  <color name="burntSienna">#EB5757</color>
+
+  <color name="aliceBlue">#F2F9FF</color>
+  <color name="athensGray">#f2f4f7</color>
+  <color name="gray">#F0F0F0</color>
+  <color name="grayTitle">#777C99</color>
+  <color name="silver">#BDBDBD</color>
+  <color name="gray10">#ECECEC</color>
+  <color name="wildSand">#F4F4F4</color>
+  <color name="alababster">#F8F8F8</color>
+  <color name="porcelain">#eef0f2</color>
+  <color name="silverChalice">#9E9E9E</color>
+  <color name="dustyGray">#959595</color>
+  <color name="black90">#474955</color>
+  <color name="black80">#5f616c</color>
+  <color name="black40">#737580</color>
+  <color name="black30">#878993</color>
+  <color name="black20">#b0b2bb</color>
+
+  <color name="section_active">#ECF5FF</color>
+  <color name="section_inactive">#F8F8F8</color>
+  <color name="text_section_active">#169DEA</color>
+  <color name="text_section_inactive">#777C99</color>
+
+  <color name="text_color_grey">#A9A9A9</color>
+  <color name="text_color_green">#20B026</color>
+</resources>

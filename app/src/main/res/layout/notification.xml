@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:orientation="horizontal">
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/icon"
+      android:layout_width="62dp"
+      android:layout_height="62dp"
+      android:layout_marginStart="@dimen/default_padding_margin"
+      android:layout_marginTop="@dimen/default_padding_margin"
+      android:layout_marginBottom="@dimen/default_padding_margin"
+      app:srcCompat="@drawable/logo_notif"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/title"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="Title"
+      android:textColor="#000"
+      android:layout_marginTop="@dimen/default_padding_margin"
+      android:textStyle="bold"
+      android:textSize="16sp"
+      android:layout_marginStart="@dimen/default_padding_margin_h"
+      android:layout_marginEnd="@dimen/default_padding_margin_h"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/message"
+      app:layout_constraintStart_toEndOf="@id/icon"/>
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/message"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="Message"
+      android:layout_marginStart="@dimen/default_padding_margin_h"
+      android:layout_marginEnd="@dimen/default_padding_margin_h"
+      android:layout_marginBottom="@dimen/default_padding_margin_h"
+      android:textSize="15sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/title"
+      app:layout_constraintStart_toEndOf="@id/icon"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

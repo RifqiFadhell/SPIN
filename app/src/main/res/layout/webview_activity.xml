@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <include
+    android:id="@+id/toolbar"
+    layout="@layout/webview_toolbar"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layout_error"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/frame_progress_bar_refresh">
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/image_error"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toTopOf="@id/text_caption_error"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_chainStyle="packed"
+      app:srcCompat="@drawable/ic_server_error" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/text_caption_error"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="28dp"
+      android:layout_marginEnd="20dp"
+      android:gravity="center"
+      android:text="@string/web_view_text_error_connection"
+      app:layout_constraintBottom_toTopOf="@id/button_action"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/image_error"
+      tools:text="Sabar ya, Mitra Qasir sedang melakukan perbaikan sistem." />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/button_action"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="28dp"
+      android:background="#f04b32"
+      android:paddingStart="48dp"
+      android:paddingTop="8dp"
+      android:paddingEnd="48dp"
+      android:paddingBottom="8dp"
+      android:text="@string/web_view_button_retry"
+      android:textColor="@android:color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/text_caption_error" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <WebView
+    android:id="@+id/web_view"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:visibility="visible"
+    app:layout_constraintBottom_toTopOf="@id/cardBottom"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+  <FrameLayout
+    android:id="@+id/frame_progress_bar_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+    <ProgressBar
+      android:id="@+id/progress_bar_refresh"
+      style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="-7dp"
+      android:indeterminate="true" />
+  </FrameLayout>
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/cardBottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin"
+    app:cardElevation="16dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/layoutBottom"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent">
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/buttonLike"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginBottom="@dimen/default_padding_margin_x"
+        android:drawableStart="@drawable/ic_unlike"
+        android:drawablePadding="@dimen/default_padding_margin_h"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="32" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/buttonComment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:drawableStart="@drawable/ic_comment"
+        android:drawablePadding="@dimen/default_padding_margin"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:paddingEnd="@dimen/default_padding_margin"
+        app:layout_constraintBottom_toBottomOf="@id/buttonLike"
+        app:layout_constraintStart_toEndOf="@id/buttonLike"
+        app:layout_constraintTop_toTopOf="@id/buttonLike"
+        tools:text="32" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/buttonShareBottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:drawablePadding="@dimen/default_padding_margin"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_share" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

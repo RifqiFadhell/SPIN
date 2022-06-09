@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:LuckyWheel="http://schemas.android.com/apk/res-auto"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+<!--  <androidx.appcompat.widget.AppCompatImageButton-->
+<!--    android:id="@+id/buttonBack"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_margin="16dp"-->
+<!--    android:background="@android:color/transparent"-->
+<!--    android:tint="@color/white"-->
+<!--    LuckyWheel:layout_constraintBottom_toBottomOf="@+id/textPoint"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:layout_constraintTop_toTopOf="@+id/textPoint"-->
+<!--    app:srcCompat="@drawable/ic_arrow_back" />-->
+
+<!--  <TextView-->
+<!--    android:id="@+id/textPoint"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_margin="16dp"-->
+<!--    android:layout_marginTop="10dp"-->
+<!--    android:background="@drawable/point_background"-->
+<!--    android:drawablePadding="10dp"-->
+<!--    android:fontFamily="@font/inter_medium"-->
+<!--    android:gravity="center"-->
+<!--    android:padding="10dp"-->
+<!--    android:text="@string/val_point_text"-->
+<!--    android:textColor="#000000"-->
+<!--    app:drawableStartCompat="@drawable/ic_coin"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--  <RelativeLayout-->
+<!--    android:id="@+id/layoutSpinner"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:background="@drawable/ic_background_coin"-->
+<!--    app:layout_constraintBottom_toBottomOf="@id/textToken"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:layout_constraintTop_toTopOf="parent">-->
+
+<!--    <RelativeLayout-->
+<!--      android:layout_width="match_parent"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:layout_centerInParent="true"-->
+<!--      android:layout_margin="20dp"-->
+<!--      android:background="@drawable/ic_circle_grey">-->
+
+<!--      <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:background="@drawable/ic_circle_blue"-->
+<!--        android:padding="20dp">-->
+
+<!--        <com.bluehomestudio.luckywheel.LuckyWheel-->
+<!--          android:id="@+id/lwv"-->
+<!--          android:layout_width="wrap_content"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:layout_centerInParent="true"-->
+<!--          LuckyWheel:arrow_image="@drawable/ic_arrow_yellow"-->
+<!--          LuckyWheel:background_color="#FFFB90"-->
+<!--          LuckyWheel:image_padding="10dp" />-->
+<!--      </RelativeLayout>-->
+<!--    </RelativeLayout>-->
+<!--  </RelativeLayout>-->
+
+<!--  <TextView-->
+<!--    android:id="@+id/textToken"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:background="@drawable/token_background"-->
+<!--    android:drawablePadding="10dp"-->
+<!--    android:fontFamily="@font/inter_medium"-->
+<!--    android:gravity="center"-->
+<!--    android:padding="10dp"-->
+<!--    android:text="@string/val_token_text"-->
+<!--    android:textColor="#000000"-->
+<!--    LuckyWheel:layout_constraintBottom_toTopOf="@id/buttonSpin"-->
+<!--    app:drawableStartCompat="@drawable/ic_token"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:layout_constraintTop_toBottomOf="@id/layoutSpinner" />-->
+
+<!--  <androidx.appcompat.widget.AppCompatTextView-->
+<!--    android:id="@+id/buttonSpin"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:background="@drawable/bg_button_spin"-->
+<!--    android:gravity="center"-->
+<!--    android:textColor="@color/white"-->
+<!--    android:textStyle="bold"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    app:layout_constraintEnd_toStartOf="@id/buttonMultiSpin"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:layout_constraintTop_toBottomOf="@id/textToken" />-->
+
+<!--  <androidx.appcompat.widget.AppCompatTextView-->
+<!--    android:id="@+id/buttonMultiSpin"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:background="@drawable/bg_button_5_spin"-->
+<!--    android:gravity="center"-->
+<!--    android:textColor="@color/white"-->
+<!--    android:textStyle="bold"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintStart_toEndOf="@id/buttonSpin"-->
+<!--    app:layout_constraintTop_toBottomOf="@id/textToken" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

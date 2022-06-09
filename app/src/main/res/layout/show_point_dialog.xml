@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@android:color/transparent">
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/backgroundPoint"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/bg_show_point" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toTopOf="@+id/backgroundPoint"
+    app:layout_constraintEnd_toEndOf="@id/backgroundPoint"
+    app:layout_constraintStart_toStartOf="@id/backgroundPoint"
+    app:layout_constraintTop_toTopOf="@+id/backgroundPoint"
+    app:srcCompat="@drawable/ic_star_point" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textCongrats"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_huge"
+    android:fontFamily="@font/proxima_bold"
+    android:gravity="center_horizontal"
+    android:text="Selamat"
+    android:textColor="@color/white"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="@+id/backgroundPoint"
+    app:layout_constraintStart_toStartOf="@+id/backgroundPoint"
+    app:layout_constraintTop_toTopOf="@id/backgroundPoint"
+    tools:ignore="HardcodedText" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textCongratsPoint"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textCongrats"
+    android:layout_marginTop="@dimen/default_padding_margin"
+    android:gravity="center_horizontal"
+    android:text="@string/congrats_point_text"
+    android:textColor="@color/white"
+    android:textSize="16sp"
+    app:layout_constraintEnd_toEndOf="@+id/backgroundPoint"
+    app:layout_constraintStart_toStartOf="@+id/backgroundPoint"
+    app:layout_constraintTop_toBottomOf="@+id/textCongrats" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textSubtitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textCongrats"
+    android:layout_marginTop="@dimen/default_padding_margin"
+    android:gravity="center_horizontal"
+    android:textColor="@color/white"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="@+id/backgroundPoint"
+    app:layout_constraintStart_toStartOf="@+id/backgroundPoint"
+    app:layout_constraintTop_toBottomOf="@+id/textCongratsPoint" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/buttonCollect"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/default_padding_margin_xh"
+    app:layout_constraintEnd_toStartOf="@id/buttonCollectAll"
+    app:layout_constraintBottom_toBottomOf="@+id/backgroundPoint"
+    app:layout_constraintStart_toStartOf="@id/backgroundPoint"
+    app:srcCompat="@drawable/ic_button_collect" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/buttonCollectAll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/default_padding_margin_xh"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="@+id/backgroundPoint"
+    app:layout_constraintEnd_toEndOf="@id/backgroundPoint"
+    app:layout_constraintStart_toEndOf="@id/buttonCollect"
+    app:srcCompat="@drawable/ic_button_collect_all" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

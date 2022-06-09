@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:facebook="http://schemas.android.com/tools"
+  android:id="@+id/layout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <include
+    android:id="@+id/toolbar"
+    layout="@layout/toolbar"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar"
+    app:srcCompat="@drawable/ic_login" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/buttonGoogle"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin"
+    android:background="@drawable/google_button_background"
+    android:drawableStart="@drawable/ic_google"
+    android:gravity="center"
+    android:paddingStart="@dimen/default_padding_margin_xxxx"
+    android:paddingTop="@dimen/default_padding_margin_h"
+    android:paddingEnd="@dimen/default_padding_margin_xxxx"
+    android:paddingBottom="@dimen/default_padding_margin_h"
+    android:text="@string/google_label"
+    android:textColor="#4285F4"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toStartOf="@id/buttonFacebook"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/image" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/buttonFacebook"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:background="@drawable/facebook_button_background"
+    android:drawableStart="@drawable/ic_facebook"
+    android:gravity="center"
+    android:paddingStart="@dimen/default_padding_margin_xxx"
+    android:paddingTop="@dimen/default_padding_margin_h"
+    android:paddingEnd="@dimen/default_padding_margin_xxx"
+    android:paddingBottom="@dimen/default_padding_margin_h"
+    android:text="@string/facebook_label"
+    android:textColor="@color/white"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/buttonGoogle"
+    app:layout_constraintTop_toBottomOf="@id/image" />
+
+  <View
+    android:id="@+id/lineCenter"
+    android:layout_width="0dp"
+    android:layout_height="1dp"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_xxx"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:background="@color/white"
+    android:visibility="visible"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/buttonGoogle" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:visibility="visible"
+    android:padding="@dimen/default_padding_margin"
+    android:textAlignment="center"
+    android:text="@string/caption_diversion_label"
+    app:layout_constraintBottom_toBottomOf="@id/lineCenter"
+    app:layout_constraintEnd_toEndOf="@id/lineCenter"
+    app:layout_constraintStart_toStartOf="@id/lineCenter"
+    app:layout_constraintTop_toTopOf="@id/lineCenter" />
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/textInputUserName"
+    style="@style/TextInputLayout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_xx"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:hint="@string/login_hint"
+    android:paddingStart="@dimen/default_padding_margin_small_x"
+    android:paddingEnd="@dimen/default_padding_margin_small_x"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/lineCenter"
+    app:startIconDrawable="@drawable/ic_user">
+
+    <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/editUserName"
+      style="@style/EditText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:imeOptions="actionNext"
+      android:inputType="text"
+      android:maxLines="1"
+      android:textSize="14sp" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/textInputPassword"
+    style="@style/TextInputLayout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:hint="@string/password_label"
+    android:paddingStart="@dimen/default_padding_margin_small_x"
+    android:paddingEnd="@dimen/default_padding_margin_small_x"
+    app:errorIconDrawable="@null"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textInputUserName"
+    app:passwordToggleEnabled="true"
+    app:startIconDrawable="@drawable/ic_key">
+
+    <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/editPassword"
+      style="@style/EditText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:imeOptions="actionNext"
+      android:inputType="textPassword"
+      android:maxLines="1"
+      android:textSize="14sp" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textForgotPassword"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
+    android:text="@string/login_forgot_password_title"
+    android:textColor="@color/cinder"
+    android:textSize="12sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textInputPassword" />
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/buttonLogin"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_xh"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:text="@string/in_label"
+    android:textAllCaps="false"
+    android:textColor="@color/white"
+    android:textSize="13sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textForgotPassword" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTitleRegister"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:text="@string/login_to_register_title"
+    android:textAlignment="center"
+    android:textColor="@color/cinder"
+    android:textSize="12sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/buttonLogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

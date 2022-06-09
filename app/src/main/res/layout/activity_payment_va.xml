@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <include
+    android:id="@+id/toolbar"
+    layout="@layout/home_toolbar" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textDeadlinePayment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:text="@string/payment_complete_deadline"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textColor="#12121B"
+    android:textSize="12sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textTimePayment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="16dp"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textColor="#12121B"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textDeadlinePayment"
+    tools:text="Sabtu, 25 Mei 2021" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textCountdownPayment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="16dp"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textColor="#12121B"
+    android:textSize="14sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textTimePayment"
+    tools:text="Selesaikan pembayaran kalian dalam 1 jam 43 menit" />
+
+  <View
+    android:id="@+id/lineCenter"
+    android:layout_width="0dp"
+    android:layout_height="14dp"
+    android:layout_marginTop="@dimen/default_padding_margin_xh"
+    android:background="@color/alababster"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textCountdownPayment" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textPaymentMethodTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="16dp"
+    android:text="@string/payment_method_title"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textColor="#12121B"
+    android:textSize="12sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/lineCenter" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/imagePaymentLogo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="16dp"
+    android:adjustViewBounds="true"
+    android:scaleType="fitXY"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textPaymentMethodTitle"
+    tools:src="@drawable/ic_place_holder" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textPaymentMethod"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="16dp"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textColor="#12121B"
+    android:textSize="12sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="@+id/imagePaymentLogo"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/imagePaymentLogo"
+    app:layout_constraintTop_toBottomOf="@+id/textPaymentMethodTitle"
+    tools:text="BCA Virtual Account" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textVATitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="16dp"
+    android:text="@string/payment_va_title"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textColor="#12121B"
+    android:textSize="12sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/imagePaymentLogo" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textVANumber"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="16dp"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textColor="#12121B"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textVATitle"
+    tools:text="80777081838293950" />
+
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/buttonCopyVA"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_xh"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:backgroundTint="#033A7C"
+    android:text="@string/copy_label"
+    android:textAllCaps="false"
+    android:textColor="@color/white"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="@+id/textVANumber"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/imagePaymentLogo" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textPaymentTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="16dp"
+    android:text="@string/payment_total_title"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textColor="#12121B"
+    android:textSize="12sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textVANumber" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textPaymentTotal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="16dp"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textColor="#12121B"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textPaymentTitle"
+    tools:text="Rp 46.000" />
+
+  <View
+    android:id="@+id/lineCenter2"
+    android:layout_width="0dp"
+    android:layout_height="14dp"
+    android:layout_marginTop="@dimen/default_padding_margin_xh"
+    android:background="@color/alababster"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textPaymentTotal" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textInformationPayment"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="16dp"
+    android:text="@string/payment_information"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textColor="#A9A9A9"
+    android:textSize="14sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/lineCenter2" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textCaraPayment"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="16dp"
+    android:text="@string/payment_information_way"
+    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+    android:textColor="@color/colorPrimary"
+    android:textSize="14sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textInformationPayment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

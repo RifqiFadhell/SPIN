@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginTop="@dimen/default_padding_margin"
+  app:cardElevation="16dp">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layoutBottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/textCounter"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/default_padding_margin_xh"
+      android:textColor="@color/cinder"
+      android:textSize="14sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="1 Topics" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/buttonNext"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/default_padding_margin_h"
+      android:layout_marginEnd="@dimen/default_padding_margin_x"
+      android:layout_marginBottom="@dimen/default_padding_margin_h"
+      android:textStyle="bold"
+      android:paddingStart="@dimen/default_padding_margin_xx"
+      android:paddingTop="@dimen/default_padding_margin_h"
+      android:paddingEnd="@dimen/default_padding_margin_xx"
+      android:paddingBottom="@dimen/default_padding_margin_h"
+      android:textAllCaps="false"
+      android:textColor="@color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Simpan" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginTop="@dimen/default_padding_margin"
+  app:cardElevation="16dp">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layoutBottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/textTitlePrice"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/default_padding_margin_xh"
+      android:text="@string/total_price_label"
+      android:textColor="@color/curiousBlue"
+      android:textSize="12sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toTopOf="@id/textTitlePriceDiscount"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/textTitlePriceDiscount"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/default_padding_margin_xh"
+      android:layout_marginTop="@dimen/default_padding_margin_small"
+      android:textColor="@color/silver"
+      android:textSize="12sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toTopOf="@id/textTitleTotalPrice"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/textTitlePrice"
+      tools:text="Rp.100.000" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/textTitleTotalPrice"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/default_padding_margin_xh"
+      android:layout_marginTop="@dimen/default_padding_margin_small"
+      android:layout_marginEnd="@dimen/default_padding_margin_xx"
+      android:layout_marginBottom="@dimen/default_padding_margin"
+      android:textColor="@color/cinder"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/buttonSubmit"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/textTitlePriceDiscount"
+      tools:text="Rp. 100.000" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/buttonSubmit"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/default_padding_margin_h"
+      android:layout_marginEnd="@dimen/default_padding_margin_x"
+      android:layout_marginBottom="@dimen/default_padding_margin_h"
+      android:letterSpacing="0.05"
+      android:paddingStart="@dimen/default_padding_margin_h"
+      android:paddingTop="@dimen/default_padding_margin_h"
+      android:paddingEnd="@dimen/default_padding_margin_h"
+      android:paddingBottom="@dimen/default_padding_margin_h"
+      android:text="@string/shop_button_submit"
+      android:textAllCaps="false"
+      android:textColor="@color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

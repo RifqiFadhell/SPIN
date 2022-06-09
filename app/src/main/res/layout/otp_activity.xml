@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@id/layout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <include
+    android:id="@+id/toolbar"
+    layout="@layout/toolbar"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/imageInformation"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding_margin_xh"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar"
+    app:srcCompat="@drawable/ic_information_otp" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textCaption1"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_xx"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:textAlignment="center"
+    android:textColor="@color/cinder"
+    android:textSize="14sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/imageInformation" />
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/textInputNumber"
+    style="@style/TextInputLayout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_h"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:hint="@string/register_number_hint"
+    android:paddingStart="@dimen/default_padding_margin_small_x"
+    android:paddingEnd="@dimen/default_padding_margin_small_x"
+    android:visibility="gone"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textCaption1"
+    app:startIconDrawable="@drawable/ic_mobile_phone">
+
+    <androidx.appcompat.widget.AppCompatEditText
+      android:id="@+id/editNumber"
+      style="@style/EditText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:imeOptions="actionNext"
+      android:inputType="number"
+      android:maxLength="14"
+      android:maxLines="1"
+      android:textSize="14sp" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textCaption2"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_x"
+    android:textAlignment="center"
+    android:textColor="@color/silverChalice"
+    android:textSize="14sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textInputNumber" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textNumber"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin"
+    android:textSize="16sp"
+    app:layout_constraintBottom_toBottomOf="@id/editNumberOtpFirstLogin"
+    app:layout_constraintEnd_toStartOf="@id/editNumberOtpFirstLogin"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@id/editNumberOtpFirstLogin"
+    tools:text="021-0202" />
+
+  <androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/editNumberOtpFirstLogin"
+    style="@style/EditText"
+    android:layout_width="50dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="@dimen/default_padding_margin"
+    android:layout_marginTop="@dimen/default_padding_margin_huge"
+    android:layout_marginEnd="@dimen/default_padding_margin"
+    android:cursorVisible="false"
+    android:gravity="center"
+    android:imeOptions="actionNext"
+    android:inputType="number"
+    android:maxLength="1"
+    android:paddingTop="@dimen/default_padding_margin"
+    android:paddingBottom="@dimen/default_padding_margin"
+    android:singleLine="true"
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toStartOf="@id/editNumberOtpSecondLogin"
+    app:layout_constraintStart_toEndOf="@id/textNumber"
+    app:layout_constraintTop_toBottomOf="@+id/imageInformation" />
+
+  <androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/editNumberOtpSecondLogin"
+    style="@style/EditText"
+    android:layout_width="50dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin"
+    android:layout_marginTop="@dimen/default_padding_margin_huge"
+    android:layout_marginEnd="@dimen/default_padding_margin"
+    android:cursorVisible="false"
+    android:gravity="center"
+    android:imeOptions="actionNext"
+    android:inputType="number"
+    android:maxLength="1"
+    android:paddingTop="@dimen/default_padding_margin"
+    android:paddingBottom="@dimen/default_padding_margin"
+    android:singleLine="true"
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toStartOf="@id/editNumberOtpThirdLogin"
+    app:layout_constraintStart_toEndOf="@id/editNumberOtpFirstLogin"
+    app:layout_constraintTop_toBottomOf="@+id/imageInformation" />
+
+  <androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/editNumberOtpThirdLogin"
+    style="@style/EditText"
+    android:layout_width="50dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin"
+    android:layout_marginTop="@dimen/default_padding_margin_huge"
+    android:layout_marginEnd="@dimen/default_padding_margin"
+    android:cursorVisible="false"
+    android:gravity="center"
+    android:imeOptions="actionNext"
+    android:inputType="number"
+    android:maxLength="1"
+    android:paddingTop="@dimen/default_padding_margin"
+    android:paddingBottom="@dimen/default_padding_margin"
+    android:singleLine="true"
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toStartOf="@id/editNumberOtpFourthLogin"
+    app:layout_constraintStart_toEndOf="@id/editNumberOtpSecondLogin"
+    app:layout_constraintTop_toBottomOf="@+id/imageInformation" />
+
+  <androidx.appcompat.widget.AppCompatEditText
+    android:id="@+id/editNumberOtpFourthLogin"
+    style="@style/EditText"
+    android:layout_width="50dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin"
+    android:layout_marginTop="@dimen/default_padding_margin_huge"
+    android:layout_marginEnd="@dimen/default_padding_margin_xx"
+    android:cursorVisible="false"
+    android:gravity="center"
+    android:imeOptions="actionNext"
+    android:inputType="number"
+    android:maxLength="1"
+    android:paddingTop="@dimen/default_padding_margin"
+    android:paddingBottom="@dimen/default_padding_margin"
+    android:textColor="@color/black"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/editNumberOtpThirdLogin"
+    app:layout_constraintTop_toBottomOf="@+id/imageInformation" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textResend"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_xx"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_xx"
+    android:textAlignment="center"
+    android:textSize="12sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/editNumberOtpFirstLogin"
+    tools:text="Kirim Ulang" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/buttonResend"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/default_padding_margin_xx"
+    android:layout_marginTop="@dimen/default_padding_margin_x"
+    android:layout_marginEnd="@dimen/default_padding_margin_xx"
+    android:text="@string/otp_caption_resend_no_count"
+    android:textAlignment="center"
+    android:textSize="12sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/editNumberOtpFirstLogin" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/textInformationCall"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/default_padding_margin"
+    android:paddingTop="@dimen/default_padding_margin_h"
+    android:paddingEnd="@dimen/default_padding_margin"
+    android:paddingBottom="@dimen/default_padding_margin_h"
+    android:text="@string/otp_caption_3"
+    android:textAlignment="center"
+    android:textSize="12sp"
+    android:textColor="@color/silverChalice"
+    app:layout_constraintBottom_toTopOf="@+id/backgroundButton"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/backgroundButton"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:elevation="10dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/buttonSubmit"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/default_padding_margin_x"
+      android:layout_marginTop="@dimen/default_padding_margin_h"
+      android:layout_marginEnd="@dimen/default_padding_margin_x"
+      android:layout_marginBottom="@dimen/default_padding_margin_h"
+      android:text="@string/otp_call_me"
+      android:textAllCaps="false"
+      android:textColor="@color/white"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/buttonVerify"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/default_padding_margin_x"
+      android:layout_marginTop="@dimen/default_padding_margin_h"
+      android:layout_marginEnd="@dimen/default_padding_margin_x"
+      android:layout_marginBottom="@dimen/default_padding_margin_h"
+      android:text="@string/otp_button_verify"
+      android:textAllCaps="false"
+      android:textColor="@color/white"
+      android:textStyle="bold"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <include
+    android:id="@+id/successRegisteredLayout"
+    layout="@layout/success_registered_layout"
+    android:visibility="gone" />
+
+  <androidx.constraintlayout.widget.Group
+    android:id="@+id/groupCodeOtp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    app:constraint_referenced_ids="textNumber,editNumberOtpFirstLogin,editNumberOtpSecondLogin,editNumberOtpThirdLogin,editNumberOtpFourthLogin,textResend" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

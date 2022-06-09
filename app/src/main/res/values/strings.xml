@@ -1,0 +1,311 @@
+<resources>
+  <string name="app_name">SPIN</string>
+
+  <string name="action_refresh">Refresh</string>
+  <string name="action_open_chrome">Buka di Chrome</string>
+  <string name="action_copy">Copy Link</string>
+  <string name="action_close">Tutup</string>
+  <!-- Strings used for fragments for navigation -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="first_fragment_label">First Fragment</string>
+  <string name="second_fragment_label">Second Fragment</string>
+  <string name="next">Next</string>
+  <string name="previous">Previous</string>
+
+  <string name="conn_internal_server_error_message">Internal Server Error.</string>
+  <string name="conn_request_timeout_message">Request Time Out.</string>
+  <string name="conn_no_connection_message">Kamu tidak terhubung ke internet</string>
+  <string name="conn_unknown_error_message">Sorry, something went wrong.</string>
+  <string name="conn_unknown_error_message_indo">Layanan Sedang Bermasalah</string>
+  <string name="conn_unknown_error_message_caption_indo">Kami sedang berusaha memperbaiki sistem kami. Silahkan coba beberapa saat lagi.</string>
+
+  <!--Global Char-->
+  <string name="copy_label">Copy</string>
+  <string name="username_label">Username</string>
+  <string name="password_label">Password</string>
+  <string name="in_label">Masuk</string>
+  <string name="login_label">Login</string>
+  <string name="verification_label">Verifikasi</string>
+  <string name="facebook_label">Facebook</string>
+  <string name="google_label">Google</string>
+  <string name="diversion_label">Atau login menggunakan</string>
+  <string name="caption_diversion_label">Login untuk menyimpan preferensi feed dan memberi like dan comment.</string>
+  <string name="register_diversion_label">Atau registrasi dengan</string>
+  <string name="simpan_label">Simpan</string>
+  <string name="kirim_label">Kirim</string>
+  <string name="masuk_label">Masuk</string>
+  <string name="label_batal">Batal</string>
+  <string name="label_ganti">Ganti</string>
+  <string name="save_label">Simpan</string>
+  <string name="next_label">Lanjut</string>
+  <string name="update_label">Ada Aplikasi Versi Baru!</string>
+  <string name="update_caption">Segera update aplikasi SPIN Esports untuk mendapatkan fitur-fitur dan update terbaru!</string>
+  <string name="confirm_label">Mengerti</string>
+  <string name="to_up_label">Kembali ke atas</string>
+  <string name="comment_label">Tuliskan Komentarmu . . . </string>
+  <string name="admin_label">admin</string>
+  <string name="reply_label">Balas</string>
+  <string name="later_label">Nanti</string>
+  <string name="reply_comment_label">Membalas @%1$s</string>
+  <string name="ok_label">OK</string>
+  <string name="download_label">Update</string>
+  <string name="select_file">Pilih Foto</string>
+  <string name="select_label">Pilih</string>
+  <string name="skip_label"><u>Skip</u></string>
+  <string name="notification_label">Notification</string>
+  <string name="counter_comment">%1$s/500</string>
+  <string name="notification_caption">Nyalakan notifikasi aplikasi untuk mendapatkan update penting seputar esports dan gaming</string>
+  <string name="see_reply_label">%1$s Balasan lainnya</string>
+  <string name="button_set_preference_label">Set Preferensi</string>
+  <string name="error_empty_content_label">Konten Tidak Tersedia</string>
+  <string name="error_empty_games_label">Games Tidak Tersedia</string>
+  <string name="error_empty_comment_label">Belum ada komentar</string>
+  <string name="error_empty_comment_caption">Jadilah komentar pertama di postingan ini</string>
+  <string name="error_empty_games_caption">Opps ! Maaf Untuk saat ini tidak ada games yang dapat dimainkan.<br /><br />Namun jangan kawatir, kami akan kembali dengan Games-games baru selanjutnya!</string>
+  <string name="suberror_empty_label">Oops ! Maaf Untuk saat ini konten yang anda cari tidak tersedia</string>
+  <string name="error_internet_label">Masalah Internet</string>
+  <string name="suberror_internet_label">Oops ! Ada masalah pada jaringan internet anda. Silahkan hidupkan paket data atau jaringan wifi pada smartphone anda</string>
+  <string name="last_feed_title">Feed Anda sudah habis</string>
+  <string name="last_feed_caption">Untuk saat ini feed kamu sudah habis nih, Kembali keatas untuk nikmati feed yang lainnya.</string>
+
+  <string name="hello_first_fragment">Hello first fragment</string>
+  <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+  <string name="register_label_button">Register</string>
+  <string name="register_subtitle_text">Sudah Memiliki Akun? <b><u>Login Disini</u></b></string>
+
+  <!--Register Form-->
+  <string name="register_form_title">Register untuk menyimpan preferensi feed dan memberi like dan comment.</string>
+  <string name="register_form_social_media_title">Register via sosial media untuk menyimpan preferensi feed dan memberi like dan comment.</string>
+  <string name="register_title_toolbar">Bikin Akun</string>
+  <string name="register_error">Maaf sepertinya sedang ada masalah pada server kami</string>
+  <string name="register_agreement_title">Dengan registrasi saya menyetujui <b><u>syarat,ketentuan dan Kebijakan Privasi</u></b></string>
+  <string name="register_term_title">By signing up you are agree to <b><u>terms and conditions</u></b></string>
+  <string name="register_password_dialog_title">Password yang kamu buat wajib memiliki :</string>
+  <string name="register_password_uppercase_dialog_title">Huruf besar</string>
+  <string name="register_password_special_case_dialog_title">Angka</string>
+  <string name="register_password_min_dialog_title">Minimal 8 karakter</string>
+  <string name="register_number_email_was_available_error">Nomor/Email sudah digunakan</string>
+
+  <string name="register_first_name_hint">Nama Depan</string>
+  <string name="register_last_name_hint">Nama Belakang</string>
+  <string name="register_name_invalid_error">Tidak boleh menggunakan karakter spesial</string>
+  <string name="register_name_empty_error">Nama tidak boleh kosong</string>
+  <string name="register_name_min_error">Nama minimal 3 huruf</string>
+
+  <string name="register_number_hint">Nomor HP</string>
+  <string name="register_number_empty_error">Nomor tidak boleh kosong</string>
+  <string name="register_number_min_error">Minimal 9 Nomor</string>
+  <string name="register_number_was_available_error">Nomor sudah digunakan</string>
+  <string name="number_was_error">Format Nomor Salah</string>
+
+  <string name="register_password_empty_error">Password tidak boleh kosong</string>
+
+  <string name="register_email_hint">Email</string>
+  <string name="register_email_empty_error">Email tidak boleh kosong</string>
+  <string name="register_email_error">Masukan Email dengan Benar</string>
+  <string name="register_email_was_available_error">Email sudah digunakan</string>
+
+  <string name="register_username_empty_error">Username tidak boleh kosong</string>
+  <string name="register_username_space_error">Tidak boleh menggunakan spasi</string>
+  <string name="register_username_upper_error">Tidak boleh menggunakan huruf besar</string>
+  <string name="register_username_special_error">Tidak boleh menggunakan karakter spesial</string>
+  <string name="register_username_was_available_error">Username sudah digunakan</string>
+  <string name="register_username_min_error">Username minimal 3 huruf</string>
+
+  <!--Login-->
+  <string name="login_form_title">Login untuk menyimpan preferensi feed dan memberi like dan comment.</string>
+  <string name="login_hint">Username/Nomor Hp</string>
+  <string name="login_add_number">Silahkan tambahkan nomormu terlebih dahulu</string>
+  <string name="login_username_not_found">Username/Nomor Hp tidak ditemukan</string>
+  <string name="login_number_available">Nomor Hp sudah digunakan</string>
+  <string name="login_otp_request">Kamu belum verifikasi nomormu silahkan lanjut verifikasi OTP</string>
+  <string name="login_number_request">Kamu belum menambahkan nomor hp pada akun mu silahkan tambahkan nomor hp mu..</string>
+  <string name="login_web_request">Kamu belum menambahkan nomor hp dan preference pada akun mu silahkan tambahkan nomor hp mu dan preference</string>
+  <string name="login_forgot_password_title"><u>Lupa Password ?</u></string>
+  <string name="login_to_register_title">Tidak memiliki akun ? <u>Registrasi disini</u></string>
+
+  <!--OTP-->
+  <string name="otp_toolbar_title">Verifikasi Nomor HP</string>
+  <string name="otp_toolbar_title_2">Verifikasi Berhasil</string>
+  <string name="otp_caption_1">Kami akan Missed Call nomor kamu di <b>%1$s</b> , panggilan ini tidak perlu dijawab</string>
+  <string name="otp_caption_add_number">Kami akan Missed Call nomor kamu, panggilan ini tidak perlu dijawab, Silahkan isi Nomor kamu terlebih dahulu</string>
+  <string name="otp_caption_2">4 digit terakhir dari nomor yang menelpon kamu adalah kode verifikasi kamu</string>
+  <string name="otp_caption_3">Kami akan menghubungi anda sebentar lagi. Mohon tunggu</string>
+  <string name="otp_caption_email">Kami sudah megirim 6 digit code OTP ke Email <u>%1$s</u>. Silahkan cek email dan masukan 6 digit code OTP anda</string>
+  <string name="otp_caption_limit_resend">Kamu sudah melakukan 3 kali kirim ulang. Coba dalam 60 menit</string>
+  <string name="otp_code_error">OTP Code salah</string>
+  <string name="otp_call_me">Misscall Saya</string>
+  <string name="otp_button_verify">Verifikasi</string>
+  <string name="otp_code_success">Akun kamu berhasil dibuat! Silahkan melanjutkan dengan mengetuk tombol dibawah</string>
+  <string name="otp_caption_call"><b>Masukan 4 digit terakhir dari nomor yang menelpon kamu</b></string>
+  <string name="otp_caption_resend">Kirim ulang dalam (%1$s)</string>
+  <string name="otp_caption_success">Akun kamu sudah terbuat! Silahkan melanjutkan dengan mengetuk tombol dibawah</string>
+  <string name="otp_caption_resend_no_count"><u>Kirim ulang sekarang</u></string>
+  <string name="loading_dialog_add">Mohon tunggu sebentar...</string>
+
+  <string name="game_title_text">Pilih Konten Game apa saja yang ingin kalian lihat di feed</string>
+  <string name="game_title_toolbar">Pilih Game</string>
+  <string name="game_selected_text">%1$s Games</string>
+
+  <string name="topic_title_text">Pilih topik apa saja yang ingin kalian lihat di feed.</string>
+  <string name="topic_title_toolbar">Pilih Topik</string>
+  <string name="topic_selected_text">%1$s Topics</string>
+
+  <string name="forgot_password_title_text">Masukan email/nomor anda untuk mendapatkan instruksi mengubah password anda</string>
+  <string name="forgot_password_title_toolbar">Lupa Password</string>
+  <string name="forgot_password_hint">Nomor HP</string>
+
+  <string name="new_password_title_text">Silahkan masukan password baru dan konfiramsi password anda</string>
+  <string name="new_password_hint">Password Baru</string>
+  <string name="confirm_new_password_hint">Konfirmasi Password</string>
+
+  <string name="password_change_button">Ubah Password</string>
+  <string name="forgot_success_title_text">Password anda berhasil di ubah silahkan masuk ke aplikasi dialyspin</string>
+
+  <!--FEED-->
+  <string name="feed_button_title_trending">Trending</string>
+  <string name="feed_button_title_newest">Terbaru</string>
+  <string name="feed_button_option">Atur Feed</string>
+
+  <!--Webview-->
+  <string name="web_view_telephone">tel:</string>
+  <string name="web_view_number_not_valid">Ups, format nomor handphone tidak valid</string>
+  <string name="web_view_button_retry">Coba lagi</string>
+  <string name="web_view_text_error_server">Duh, sedang terjadi masalah di sistem kami, silahkan coba lagi.</string>
+  <string name="web_view_text_error_connection">Kamu tidak terhubung ke internet.</string>
+  <string name="new_post">Post Terbaru</string>
+  <string name="label_hapus_komentar">Hapus Komentar</string>
+  <string name="label_sembunyikan_komentar">Sembunyikan Komentar</string>
+
+  <!--Profile-->
+  <string name="profile_item_order">Tentang SPIN</string>
+  <string name="profile_item_orders">My Orders</string>
+  <string name="profile_item_discord">Join Komunitas Discord</string>
+  <string name="profile_item_referral">Undang Teman</string>
+  <string name="profile_item_feedback">Beri Masukan</string>
+  <string name="profile_item_help">Pusat Bantuan</string>
+  <string name="profile_item_logout">Logout</string>
+  <string name="profile_edit_photo">Ganti Foto Profile</string>
+  <string name="profile_edit_username">Ganti Username</string>
+  <string name="profile_edit_bio">Ganti Profile Bio</string>
+  <string name="profile_edit_new_username">Username baru</string>
+  <string name="profile_edit_username_caption">Ingat, kamu hanya dapat mengganti username ini 7 hari kemudian</string>
+  <string name="profile_edit_username_title">Masukkan username baru</string>
+  <string name="profile_edit_bio_title">Ganti Profile Bio</string>
+  <string name="profile_edit_bio_caption">Maksimum 180 karakter</string>
+  <string name="profile_edit_insta_title">Ganti Profile Instagram</string>
+  <string name="profile_edit_insta_caption">Masukkan id profile instagram mu disini</string>
+
+  <!--COMMENT TIMING-->
+  <string name="time_ago_prefix" />
+  <string name="time_ago_suffix">yang lalu</string>
+  <string name="time_ago_seconds">kurang dari satu menit</string>
+  <string name="time_ago_minute">sekitar 1 menit</string>
+  <string name="time_ago_minutes">%d menit</string>
+  <string name="time_ago_hour">sekitar 1 jam</string>
+  <string name="time_ago_hours">sekitar %d jam</string>
+  <string name="time_ago_day">sehari</string>
+  <string name="time_ago_days">%d hari</string>
+  <string name="time_ago_month">sekitar 1 bulan</string>
+  <string name="time_ago_months">%d bulan</string>
+  <string name="time_ago_year">sekitar setahun</string>
+  <string name="time_ago_years">%d tahun</string>
+
+  <!--Referral Code-->
+  <string name="referral_title">Referral</string>
+  <string name="referral_check_title">Saya memiliki referral code..</string>
+  <string name="referral_title_item_invite">Invite Temanmu</string>
+  <string name="referral_share_caption">Bagikan sekarang</string>
+  <string name="referral_verify_caption">Masukan Code</string>
+  <string name="referral_title_code">Referral code saya</string>
+  <string name="referral_title_add">Masukkan referral code</string>
+  <string name="referral_subtitle_item">Dapatkan 2 token lucky spin</string>
+  <string name="referral_title_item_add">Input Referral Code</string>
+  <string name="referral_caption_title">Undang teman kamu dan dapatkan 2 token lucky spin!</string>
+  <string name="referral_caption_subtitle">Lucky spin akan berhadiah points yang dapat kamu pakai untuk mendapatkan diamond ML, FF, PUBG UC, dll.</string>
+  <string name="referral_not_valid">Maaf Referral code yang anda masukan tidak valid</string>
+
+  <string name="val_token_text">%1$s Token SPIN</string>
+  <string name="val_point_text">%1$s SPIN Point</string>
+  <string name="val_point_rupiah_text">%1$s SPIN Point = Rp. %1$s</string>
+  <string name="play_token_text">Dapatkan Token SPIN dengan:</string>
+  <string name="play_token_sub_text">Kesempatan dapat token di refresh setiap jam 10.00 WIB setiap harinya</string>
+  <string name="play_point_text">Tukar Spin Point</string>
+  <string name="play_point_sub_text">Tukar Point menjadi diskon belanja di SPIN Shop</string>
+  <string name="play_point_button">Gunakan di Shop</string>
+  <string name="faq_label">FAQ</string>
+  <string name="play_spin_text">SPIN</string>
+  <string name="play_5spin_text">5x SPIN</string>
+  <string name="congrats_point_text">Kamu dapat %1$s SPIN Point dari task:</string>
+  <string name="open_spin_app">Buka Aplikasi SPIN</string>
+  <string name="like_comment_task">Like / Comment</string>
+  <string name="game_banner_title">Mau dapet voucher game UniPin gratis?</string>
+  <string name="game_banner_subtitle">Jadilah pengumpul SPIN Token terbanyak dalam 1 minggu ke depan</string>
+  <string name="game_button_leader_boards">Leaderboards</string>
+  <string name="game_button_detail">Lihat Detail</string>
+
+  <!-- FACEBOOK LOGIN -->
+  <string name="facebook_app_id">2451818981775812</string>
+  <string name="fb_login_protocol_scheme">fb2451818981775812</string>
+  <string name="hadiah_label">Hadiah</string>
+  <string name="sort_label">Sort</string>
+
+  <!--Shop-->
+  <string name="package_label">Paket Pembelian</string>
+  <string name="shop_label">Pilih Toko</string>
+  <string name="coupon_label">Kode Kupon</string>
+  <string name="id_label">ID</string>
+  <string name="dismiss_label"><u>Dismiss</u></string>
+  <string name="server_label">Server</string>
+  <string name="total_price_label">Total Harga</string>
+  <string name="shop_information_label">Informasi Akun</string>
+  <string name="shop_information_caption"><b>Klik disini</b> untuk melihat letak ID, Server dan Nickname Mobile Legends Anda</string>
+  <string name="shop_merchant_label">Toko yang dipilih</string>
+  <string name="shop_payment_label">Metode Pembayaran</string>
+  <string name="shop_select_payment_label">Pilih Metode Pembayaran</string>
+  <string name="shop_coupon_hint">Masukkan Kode Kupon</string>
+  <string name="shop_button_submit">Beli Sekarang</string>
+  <string name="shop_button_apply">Gunakan</string>
+  <string name="shop_title_price">Detail Pembayaran</string>
+  <string name="shop_title_coupon">Kupon</string>
+  <string name="shop_total_label">Total Pembayaran</string>
+  <string name="shop_title_success_coupon">%1$s Lebih Hemat</string>
+  <string name="shop_caption_success_coupon">%1$s Berhasil Dipakai!</string>
+  <string name="shop_caption_cancel_coupon_snack">Kode <b>%1$s</b> kupon sudah berhasil dihapus!</string>
+  <string name="shop_caption_apply_coupon_snack">Kode <b>%1$s</b> kupon sudah berhasil diinput!</string>
+  <string name="shop_caption_invalid_coupon_snack">Kode <b>%1$s</b> tidak valid!</string>
+  <string name="shop_error_coupon">Kupon tidak boleh kosong..</string>
+  <string name="shop_title_contact">Detail Kontak</string>
+  <string name="shop_information_contact">Detail kontak Anda diperlukan untuk pengiriman resi pembayaran dan Anda akan dihubungi ketika ada kendala dengan order Anda</string>
+  <string name="shop_title_login">Log In atau Register</string>
+  <string name="shop_information_login">untuk mengisi detail kontak dengan lebih cepat</string>
+  <string name="shop_title_form">Atau isi form dibawah ini</string>
+  <string name="shop_order_status">Cek Order Status</string>
+  <string name="shop_error_form">Form Informasi Akun Wajib diisi..</string>
+  <string name="shop_error_form_empty">Isian form tidak boleh kosong!</string>
+  <string name="payment_complete_title">Selesaikan Pembayaran</string>
+  <string name="payment_complete_deadline">Selesaikan Pembayaran Sebelum</string>
+  <string name="payment_method_title">Metode Pembayaran</string>
+  <string name="payment_va_title">Nomor Virtual Account</string>
+  <string name="payment_total_title">Total Pembayaran</string>
+  <string name="payment_information">Order Anda baru diteruskan ke penjual setelah pembayaran terverisikasi</string>
+  <string name="payment_information_way">Lihat Cara Pembayaran</string>
+  <string name="payment_method_va">%1$s Virtual Account</string>
+  <string name="payment_countdown">Selesaikan pembayaran anda dalam %1$s</string>
+  <string name="payment_countdown_finish">Waktu pembayaran anda sudah habis</string>
+
+  <string name="history_title_toolbar">My Orders</string>
+  <string name="history_complete_payment">Segera lunasi pembayaran Anda sebelum %1$s</string>
+  <string name="history_payment_way">Cara Pembayaran</string>
+  <string name="history_toko_text">Toko Penjual</string>
+  <string name="history_invoice_text">Invoice</string>
+  <string name="history_payment_detail_text">Detail Pembayaran</string>
+  <string name="history_payment_price_text">Harga Produk</string>
+  <string name="history_coupon_text">Kupon</string>
+  <string name="history_payment_total_text">Total Bayar</string>
+  <string name="history_payment_status_text">Status Pembayaran</string>
+  <string name="history_detail_order_text">Detail Order</string>
+  <string name="history_help_text">Hubungi Kami</string>
+  <string name="history_cancel_text">Batalkan Pembelian Ini</string>
+
+</resources>

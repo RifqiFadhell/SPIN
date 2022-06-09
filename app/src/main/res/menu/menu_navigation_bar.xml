@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <item
+    android:id="@+id/homeFeed"
+    android:icon="@drawable/ic_feed_selector"
+    android:title="Feed"
+    android:enabled="true"/>
+
+  <item
+    android:id="@+id/homeShop"
+    android:enabled="true"
+    android:icon="@drawable/ic_shop_selector"
+    android:title="Shop" />
+
+  <item
+    android:id="@+id/homeGames"
+    android:icon="@drawable/ic_game_selector"
+    android:title="Games"
+    android:enabled="true"/>
+
+  <item
+    android:id="@+id/homeProfile"
+    android:icon="@drawable/ic_profile_selector"
+    android:title="Profile"
+    android:enabled="true"/>
+
+</menu>

@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/layoutParent"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingBottom="20dp">
+
+  <include
+    android:id="@+id/toolbar"
+    layout="@layout/shop_toolbar" />
+
+  <androidx.core.widget.NestedScrollView
+    android:id="@+id/scroll"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <TextView
+        android:id="@+id/textOrderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Order ID: XA123B70" />
+
+      <TextView
+        android:id="@+id/textOrderDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOrderId"
+        tools:text="18 Januari 2021 - 15:38" />
+
+      <androidx.cardview.widget.CardView
+        android:id="@+id/informationDeadlineCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:layout_marginBottom="@dimen/default_padding_margin_huge"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOrderDate">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/default_padding_margin_h"
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="@dimen/default_padding_margin_h"
+          android:layout_marginBottom="16dp">
+
+          <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textDeadlinePayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/history_complete_payment"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/cinder"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonPaymentInformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_padding_margin_x"
+            android:layout_marginTop="@dimen/default_padding_margin_h"
+            android:layout_marginEnd="@dimen/default_padding_margin_x"
+            android:layout_marginBottom="@dimen/default_padding_margin_h"
+            android:backgroundTint="#033A7C"
+            android:text="@string/history_payment_way"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDeadlinePayment"
+            tools:targetApi="lollipop" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+      </androidx.cardview.widget.CardView>
+
+      <androidx.cardview.widget.CardView
+        android:id="@+id/informationOrderCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:layout_marginBottom="@dimen/default_padding_margin_huge"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/informationDeadlineCard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/default_padding_margin_h"
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="@dimen/default_padding_margin_h"
+          android:layout_marginBottom="16dp">
+
+          <LinearLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/category_active_background"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+              android:id="@+id/imageLogo"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/ic_diamond" />
+          </LinearLayout>
+
+          <TextView
+            android:id="@+id/textOrderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#343D66"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageLayout"
+            tools:text="328 Diamonds" />
+
+          <TextView
+            android:id="@+id/textOrderProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#A9A9A9"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textOrderName"
+            tools:text="Mobile Legend" />
+
+          <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageStore"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_outlet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textOrderProductName" />
+
+          <TextView
+            android:id="@+id/textOrderMerchantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#12121B"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageStore"
+            app:layout_constraintTop_toTopOf="@+id/imageStore"
+            tools:text="Pica Gaming Store" />
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/history_toko_text"
+            android:textColor="#A9A9A9"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageStore"
+            app:layout_constraintTop_toBottomOf="@+id/textOrderMerchantName" />
+
+          <TextView
+            android:id="@+id/textInvoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/history_invoice_text"
+            android:textColor="#12121b"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageStore" />
+
+          <View
+            android:id="@+id/backgroundInvoice"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/default_padding_margin_x"
+            android:background="@drawable/background_alababster"
+            app:layout_constraintBottom_toBottomOf="@id/titleStatusPayment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInvoice" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textDetailPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/default_padding_margin_xxh"
+            android:layout_marginEnd="10dp"
+            android:maxLines="1"
+            android:text="@string/history_payment_detail_text"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#12121b"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInvoice" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titlePriceOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:maxLines="1"
+            android:text="@string/history_payment_price_text"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/text_color_grey"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDetailPayment" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textPriceOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/cinder"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDetailPayment"
+            tools:text="Rp 50.000" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleCouponOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:maxLines="1"
+            android:text="@string/history_coupon_text"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/text_color_grey"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titlePriceOrder" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textCouponNameOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/text_color_green"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/titleCouponOrder"
+            app:layout_constraintTop_toBottomOf="@id/titlePriceOrder"
+            tools:text="SPINDISKON" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textCouponPriceOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/text_color_green"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titlePriceOrder"
+            tools:text="-Rp 50.000" />
+
+          <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupCoupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="titleCouponOrder,textCouponNameOrder,textCouponPriceOrder" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleTotalBayar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/default_padding_margin_x"
+            android:layout_marginEnd="10dp"
+            android:maxLines="1"
+            android:text="@string/history_payment_total_text"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#12121b"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleCouponOrder" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTotalBayar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/default_padding_margin_x"
+            android:layout_marginEnd="10dp"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/cinder"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleCouponOrder"
+            tools:text="Rp 41.000" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/titleStatusPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:maxLines="1"
+            android:paddingBottom="10dp"
+            android:text="@string/history_payment_status_text"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/text_color_grey"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTotalBayar" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textStatusPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:maxLines="1"
+            android:paddingBottom="10dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/cinder"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTotalBayar"
+            tools:text="Belum Lunas" />
+
+          <TextView
+            android:id="@+id/textDetailOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/history_detail_order_text"
+            android:textColor="#12121b"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleStatusPayment" />
+
+          <View
+            android:id="@+id/backgroundOrder"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_alababster"
+            app:layout_constraintBottom_toBottomOf="@id/listMetadata"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDetailOrder" />
+
+          <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listMetadata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textDetailOrder"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_list_metadata" />
+
+          <View
+            android:id="@+id/backgroundPackageOrder"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_alababster"
+            app:layout_constraintBottom_toBottomOf="@id/textDescPackageOrder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listMetadata" />
+
+          <TextView
+            android:id="@+id/textPackageOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listMetadata"
+            tools:text="Paket Fast" />
+
+          <TextView
+            android:id="@+id/textSubPackageOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/cinder"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/textPackageOrder"
+            app:layout_constraintTop_toBottomOf="@+id/listMetadata"
+            tools:text="(5 - 10 Menit Kirim)" />
+
+          <TextView
+            android:id="@+id/textDescPackageOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/lato_bold"
+            android:paddingBottom="10dp"
+            android:textColor="#12121b"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPackageOrder"
+            tools:text="Produk akan dikirim penjual dalam 5-10 menit setelah pembayaran. Toko buka jam 08:00 - 20:00 WIB. Order diluar jam buka paling lambat akan diproses di keesokan harinya." />
+
+          <View
+            android:id="@+id/backgroundRefund"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/default_padding_margin_x"
+            android:background="@drawable/background_green_rounded"
+            app:layout_constraintBottom_toBottomOf="@id/textCaptionRefund"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDescPackageOrder" />
+
+          <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageVerified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/default_padding_margin_xxh"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDescPackageOrder"
+            app:srcCompat="@drawable/ic_verified_green" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRefund"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_padding_margin"
+            android:layout_marginTop="@dimen/default_padding_margin_xxh"
+            android:layout_marginEnd="@dimen/default_padding_margin"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/forestGreen"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/imageVerified"
+            app:layout_constraintTop_toBottomOf="@id/textDescPackageOrder"
+            tools:text="100% Refund" />
+
+          <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textCaptionRefund"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_padding_margin"
+            android:layout_marginTop="@dimen/default_padding_margin_small"
+            android:layout_marginEnd="@dimen/default_padding_margin_x"
+            android:paddingBottom="@dimen/default_padding_margin_x"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/forestGreen"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageVerified"
+            app:layout_constraintTop_toBottomOf="@id/textRefund"
+            app:lineHeight="16sp"
+            tools:text="Apabila order Anda belum juga diproses oleh pihak toko setelah sudah lewat 24 jam setelah konfirmasi pembayaran" />
+
+          <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupInputRefund"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="textCaptionRefund,textRefund,imageVerified,backgroundRefund" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+      </androidx.cardview.widget.CardView>
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonHelpOrder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:layout_marginBottom="@dimen/default_padding_margin_h"
+        android:backgroundTint="#f8f8f8"
+        android:text="@string/history_help_text"
+        android:textAllCaps="false"
+        android:textColor="#777C99"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/informationOrderCard"
+        tools:ignore="UnusedAttribute" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonCancelOrder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:layout_marginBottom="@dimen/default_padding_margin_h"
+        android:backgroundTint="#f8f8f8"
+        android:text="@string/history_cancel_text"
+        android:textAllCaps="false"
+        android:textColor="@color/redOrange"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonHelpOrder"
+        tools:ignore="UnusedAttribute" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_background_profile"
+        android:paddingTop="@dimen/default_padding_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageUser"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="@dimen/default_padding_margin_x"
+            app:layout_constraintBottom_toBottomOf="@id/textUserEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textUsername"
+            tools:src="@drawable/ic_place_holder" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textUsername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_padding_margin_x"
+            android:layout_marginEnd="16dp"
+            android:lines="1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/imageUser"
+            app:layout_constraintTop_toBottomOf="@id/buttonEditProfile"
+            tools:text="beby Jovanca" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textUserEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_padding_margin_x"
+            android:layout_marginBottom="@dimen/default_padding_margin_huge"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/background"
+            app:layout_constraintStart_toEndOf="@id/imageUser"
+            app:layout_constraintTop_toBottomOf="@id/textUsername"
+            tools:text="ucuy@gmail.com" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttonEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_padding_margin"
+            android:layout_marginEnd="@dimen/default_padding_margin_x"
+            android:background="@drawable/edit_background"
+            android:drawableStart="@drawable/ic_edit_profile"
+            android:drawablePadding="@dimen/default_padding_margin"
+            android:includeFontPadding="false"
+            android:padding="@dimen/default_padding_margin"
+            android:paddingStart="@dimen/default_padding_margin_x"
+            android:paddingEnd="@dimen/default_padding_margin_x"
+            android:text="Edit Profile"
+            android:textColor="@color/color_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textBio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_padding_margin_x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_top"
+        tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s" />
+
+    <TextView
+        android:id="@+id/textInstagram"
+        android:textColor="@color/color_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_padding_margin_x"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textBio"
+        android:text="Add your instagram id here"
+        app:drawableStartCompat="@drawable/ic_instagram" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/toolbar"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@color/catalinaBlue"
+  app:layout_constraintEnd_toEndOf="parent"
+  app:layout_constraintStart_toStartOf="parent"
+  app:layout_constraintTop_toTopOf="parent">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/default_padding_margin_h"
+    android:visibility="visible">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+      android:id="@+id/buttonBack"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@android:color/transparent"
+      android:padding="@dimen/default_padding_margin"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/ic_arrow_back" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/textTitleToolbar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:maxLines="1"
+      android:padding="10dp"
+      android:textAlignment="center"
+      android:textColor="@color/cinder"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Ini Text Toolbar" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/imageToolbar"
+      android:layout_width="72dp"
+      android:layout_height="48dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/ic_toolbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/buttonOption"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/option_background"
+      android:drawableStart="@drawable/ic_option"
+      android:drawablePadding="@dimen/default_padding_margin_small"
+      android:padding="@dimen/default_padding_margin"
+      android:text="@string/feed_button_option"
+      android:textColor="@color/black"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/buttonSkip"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/default_padding_margin"
+      android:text="@string/skip_label"
+      android:textColor="@color/cinder"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+      android:id="@+id/textToken"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/token_background"
+      android:drawablePadding="10dp"
+      android:fontFamily="@font/inter_medium"
+      android:gravity="center"
+      android:padding="@dimen/default_padding_margin"
+      android:text="@string/val_token_text"
+      android:textColor="#000000"
+      android:visibility="gone"
+      app:drawableStartCompat="@drawable/ic_token"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+      android:id="@+id/background"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:background="@drawable/background_rounded_white"
+      app:layout_constraintBottom_toBottomOf="@id/textOrder"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@id/rightMenuLyt"
+      app:layout_constraintTop_toTopOf="@id/textOrder" />
+
+    <TextView
+      android:id="@+id/textOrder"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:drawablePadding="10dp"
+      android:fontFamily="@font/inter_medium"
+      android:gravity="center"
+      android:padding="@dimen/default_padding_margin"
+      android:text="@string/profile_item_orders"
+      android:textColor="#000000"
+      android:visibility="visible"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+      android:id="@+id/rightMenuLyt"
+      android:layout_width="wrap_content"
+      android:layout_height="?attr/actionBarSize"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/textOrder"
+      app:layout_constraintTop_toTopOf="parent">
+
+      <ImageView
+        android:id="@+id/loncengicon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_order"
+        app:tint="@color/deepCove" />
+
+      <TextView
+        android:id="@+id/textTotalOrder"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignStart="@+id/loncengicon"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/circle_red"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        tools:ignore="SmallSp"
+        tools:text="8" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.Group
+      android:id="@+id/groupOrder"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      app:constraint_referenced_ids="background, rightMenuLyt, textOrder" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.Toolbar>

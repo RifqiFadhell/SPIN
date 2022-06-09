@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginTop="@dimen/default_padding_margin_small_x">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layoutItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="34dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/imageProfile"
+      android:layout_width="34dp"
+      android:layout_height="34dp"
+      android:layout_marginStart="@dimen/default_padding_margin_x"
+      android:src="@drawable/ic_place_holder"
+      app:layout_constraintBottom_toBottomOf="@id/textName"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@id/textName"
+      tools:ignore="VectorDrawableCompat" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/textName"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/default_padding_margin_h"
+      android:layout_marginTop="@dimen/default_padding_margin_x"
+      android:layout_marginEnd="@dimen/default_padding_margin"
+      android:maxLines="1"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      android:textSize="12sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toEndOf="@id/imageProfile"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Udin" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/textAdmin"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/default_padding_margin"
+      android:layout_marginEnd="@dimen/default_padding_margin"
+      android:background="@drawable/admin_background"
+      android:paddingStart="@dimen/default_padding_margin_small"
+      android:paddingTop="@dimen/default_padding_margin_small_x"
+      android:paddingEnd="@dimen/default_padding_margin_small"
+      android:paddingBottom="@dimen/default_padding_margin_small_x"
+      android:text="@string/admin_label"
+      android:textColor="@color/white"
+      android:textSize="12sp"
+      android:textStyle="bold"
+      android:visibility="gone"
+      app:layout_constraintBottom_toBottomOf="@id/textName"
+      app:layout_constraintStart_toEndOf="@id/textName"
+      app:layout_constraintTop_toTopOf="@id/textName"
+      tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/textCaption"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/default_padding_margin_h"
+      android:layout_marginTop="@dimen/default_padding_margin"
+      android:layout_marginEnd="@dimen/default_padding_margin_x"
+      android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+      android:textColor="@color/vulcan"
+      android:textSize="12sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/imageProfile"
+      app:layout_constraintTop_toBottomOf="@id/textName"
+      tools:text="Gw kangen nextjack pas main PB ,,,berkat nextjack setiap gw main game yang ada snipernya pasti gw pake dan bisa nembak lewat tipisan @leo323" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/buttonOptionComment"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/default_padding_margin_x"
+      android:drawableStart="@drawable/ic_dot_three_vertical_black"
+      app:layout_constraintBottom_toBottomOf="@id/textName"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@id/textName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/buttonLike"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/default_padding_margin"
+      android:layout_marginBottom="@dimen/default_padding_margin"
+      android:drawableStart="@drawable/ic_unlike"
+      android:drawablePadding="@dimen/default_padding_margin_small"
+      android:gravity="center"
+      android:textSize="12sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="@id/textCaption"
+      app:layout_constraintTop_toBottomOf="@id/textCaption"
+      tools:text="32 Suka" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/buttonReply"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/default_padding_margin"
+      android:layout_marginEnd="@dimen/default_padding_margin"
+      android:maxLines="1"
+      android:text="@string/reply_label"
+      android:textSize="12sp"
+      app:layout_constraintStart_toEndOf="@id/buttonLike"
+      app:layout_constraintTop_toTopOf="@id/buttonLike"
+      app:layout_constraintBottom_toBottomOf="@id/buttonLike"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/textTime"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/default_padding_margin_x"
+      android:maxLines="1"
+      android:textSize="12sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@id/buttonLike"
+      app:layout_constraintBottom_toBottomOf="@id/buttonLike"
+      tools:text="2 menit yang lalu" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

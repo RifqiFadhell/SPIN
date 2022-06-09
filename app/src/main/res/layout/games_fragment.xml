@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      tools:context=".ui.home.games.GamesFragment">
+
+      <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_background_banner_game" />
+
+      <TextView
+        android:id="@+id/textTitleBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_xxx"
+        android:layout_marginTop="@dimen/default_padding_margin_xxx"
+        android:layout_marginEnd="@dimen/default_padding_margin_xxx"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/game_banner_title"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/image"
+        app:layout_constraintTop_toTopOf="@id/image" />
+
+      <TextView
+        android:id="@+id/textSubtitleBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_xxx"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_marginEnd="@dimen/default_padding_margin_xxx"
+        android:fontFamily="@font/inter_regular"
+        android:text="@string/game_banner_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitleBanner" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonDetail"
+        style="@style/SecondaryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/default_padding_margin_xxx"
+        android:layout_marginBottom="@dimen/default_padding_margin_xx"
+        android:letterSpacing="0.02"
+        android:text="@string/game_button_detail"
+        android:textAllCaps="false"
+        android:textColor="@color/dustyGray"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/dustyGray" />
+
+      <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonLeaderBoards"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/default_padding_margin_xxx"
+        android:layout_marginBottom="@dimen/default_padding_margin_xx"
+        android:letterSpacing="0.02"
+        android:text="@string/game_button_leader_boards"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTitlePlayToken"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/play_token_text"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+      <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textSubtitlePlayToken"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_padding_margin_x"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_marginEnd="@dimen/default_padding_margin_x"
+        android:fontFamily="@font/inter_regular"
+        android:text="@string/play_token_sub_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitlePlayToken" />
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listMission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding_margin_x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSubtitlePlayToken"
+        tools:listitem="@layout/item_list_mission" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.core.widget.NestedScrollView>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/emptyLayout"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/white"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0">
+
+    <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/images"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toTopOf="@id/textTitle"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_chainStyle="packed"
+      app:srcCompat="@drawable/ic_no_content" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/textTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/default_padding_margin_xxx"
+      android:text="@string/error_empty_games_label"
+      android:textColor="@color/black"
+      android:textSize="18sp"
+      app:layout_constraintBottom_toTopOf="@id/textSubtitles"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/images" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/textSubtitles"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/default_padding_margin_xx"
+      android:layout_marginTop="@dimen/default_padding_margin_x"
+      android:layout_marginEnd="@dimen/default_padding_margin_xx"
+      android:gravity="center"
+      android:text="@string/error_empty_games_caption"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/textTitle" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/SelectGameFragment">
+
+    <fragment
+        android:id="@+id/SelectGameFragment"
+        android:name="com.spin.id.ui.intro.game.SelectGameFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/select_game_fragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/SelectTopicFragment"
+        android:name="com.spin.id.ui.intro.topic.SelectTopicFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/select_topic_fragment">
+
+    </fragment>
+</navigation>

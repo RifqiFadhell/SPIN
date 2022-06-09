@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  app:cardBackgroundColor="@color/white"
+  app:cardCornerRadius="10dp"
+  android:layout_marginStart="@dimen/default_padding_margin_x"
+  android:layout_marginTop="@dimen/default_padding_margin_small"
+  android:layout_marginEnd="@dimen/default_padding_margin_x"
+  android:layout_marginBottom="@dimen/default_padding_margin_small"
+  android:clickable="true"
+  android:focusable="true"
+  app:cardElevation="4dp">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingTop="@dimen/default_padding_margin_small"
+    android:paddingBottom="@dimen/default_padding_margin_small">
+
+    <TextView
+      android:id="@+id/textProgressMission"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/inter_medium"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      app:drawableStartCompat="@drawable/ic_check_btn_sea_blue"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+      android:id="@+id/textTitleMission"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:layout_marginEnd="10dp"
+      android:fontFamily="@font/inter_medium"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toTopOf="@+id/progressMission"
+      app:layout_constraintStart_toEndOf="@+id/textProgressMission"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/textTargetToken"
+      tools:text="Buka Aplikasi SPIN" />
+
+    <ProgressBar
+      android:id="@+id/progressMission"
+      style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:layout_marginEnd="10dp"
+      android:max="5"
+      android:progress="3"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/textTargetToken"
+      app:layout_constraintStart_toEndOf="@+id/textProgressMission"
+      app:layout_constraintTop_toBottomOf="@+id/textTitleMission" />
+
+    <TextView
+      android:id="@+id/textTargetToken"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/black"
+      android:layout_marginEnd="@dimen/default_padding_margin"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="1 Token" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

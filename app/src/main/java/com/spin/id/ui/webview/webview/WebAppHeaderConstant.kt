@@ -1,0 +1,19 @@
+package com.spin.id.ui.webview
+
+class WebAppHeaderConstant {
+
+  companion object {
+
+    const val DEFAULT_TOKEN_KEY = "token"
+    const val DEFAULT_AUTHORIZATION_KEY = "Authorization"
+
+    const val DEFAULT_LIST_PPOB_HEADER_KEY = DEFAULT_TOKEN_KEY
+    const val DEFAULT_WHOLESALE_HEADER_KEY = DEFAULT_TOKEN_KEY
+    const val DEFAULT_DEPOSIT_HEADER_KEY = DEFAULT_TOKEN_KEY
+    const val DEFAULT_FINANCING_HEADER_KEY = DEFAULT_TOKEN_KEY
+    const val DEFAULT_NETWORK_HEADER_KEY = DEFAULT_TOKEN_KEY
+    const val DEFAULT_HISTORY_TRANSACTION_HEADER_KEY = DEFAULT_TOKEN_KEY
+    const val DEFAULT_KAPITAL_BOOST_HEADER_KEY = DEFAULT_AUTHORIZATION_KEY
+  }
+
+}

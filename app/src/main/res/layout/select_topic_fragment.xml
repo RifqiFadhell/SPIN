@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:orientation="vertical"
+  tools:context=".ui.intro.topic.SelectTopicFragment">
+
+  <RelativeLayout
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@id/layoutNavigation"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+      android:id="@+id/textTitleTopic"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="20dp"
+      android:gravity="center"
+      android:text="@string/topic_title_text"
+      android:textSize="14sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/listTopic"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/textTitleTopic"
+      android:layout_marginStart="@dimen/default_padding_margin_x"
+      android:layout_marginEnd="@dimen/default_padding_margin_x"
+      tools:listitem="@layout/item_list_game" />
+
+    <include
+      android:id="@+id/layoutErrorTopic"
+      layout="@layout/error_layout"
+      android:visibility="gone" />
+
+    <!--    <RelativeLayout-->
+    <!--      android:id="@+id/layoutBottomTopic"-->
+    <!--      android:layout_width="match_parent"-->
+    <!--      android:layout_height="wrap_content"-->
+    <!--      android:layout_alignParentBottom="true"-->
+    <!--      android:background="@drawable/rectangle_top_shadow_background"-->
+    <!--      android:padding="20dp"-->
+    <!--      tools:targetApi="lollipop">-->
+
+    <!--      <TextView-->
+    <!--        android:id="@+id/textCounterTopic"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentStart="true"-->
+    <!--        android:layout_centerVertical="true"-->
+    <!--        android:layout_toStartOf="@+id/buttonSimpanTopic"-->
+    <!--        android:textSize="14sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        tools:text="1 Topics" />-->
+
+    <!--      <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/buttonSimpanTopic"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_centerVertical="true"-->
+    <!--        android:backgroundTint="@color/color_button"-->
+    <!--        android:insetTop="0dp"-->
+    <!--        android:insetBottom="0dp"-->
+    <!--        android:text="@string/label_simpan"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        tools:targetApi="lollipop" />-->
+
+    <!--    </RelativeLayout>-->
+  </RelativeLayout>
+
+  <RelativeLayout
+    android:id="@+id/layoutNavigation"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <include
+      android:id="@+id/layoutBottom"
+      layout="@layout/navigation_layout"/>
+
+  </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
